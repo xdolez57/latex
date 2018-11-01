@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\begin{enumerate}
+
+\item Z fyziky víme, že velikost síly $\vec{F}$ vypočteme vztahem $F = m \cdot a$, kde $m$ je hmotnost tělesa a $a$ je zrychlení. Jednotkou síly je 1 N (newton), jehož fyzikální rozměr odvodíme z předchozího vztahu: $\mathrm{N = kg \cdot m \cdot s^{-2}}$.
+
+\item Vztahy pro povrch a objem koule jsou:
+$$S = 4\pi r^2,\qquad V = \frac{4}{3}\pi r^3,$$
+po dosazení pro $r = 5{,}9$ dostáváme výsledky $S \doteq 437{,}435\ \mathrm a\ V \doteq 860{,}29$.
+
+\item Takzvaná \emph{goniometrická jednička} $\sin^2\alpha + \cos^2\alpha = 1$ nám pomáhá při řešení rovnic.
+
+\item Limity typu $\frac{0}{0}$ a $\frac{\infty}{\infty}$ počítáme L'H\^{o}spitalovým pravidlem, například
+\begin{equation}
+\lim_{x \rightarrow \infty} \frac{x^2 - 4x}{2x^2 + 3x - 1} = \lim_{x \rightarrow \infty} \frac{2x - 4}{4x + 3}
+\end{equation}
+a odsud další derivací dostáváme
+\begin{equation}
+\lim_{x \rightarrow \infty} \frac{2x - 4}{4x + 3} = \frac{1}{2}.
+\end{equation}
+Derivace je principiálně popsána vztahem 3.
+
+\item Pravděpodobnost výhry při losování $k$ čísel z $n$ možných lze vypočítat pomocí kombinačního čísla $n \choose k$. Například při losování 6 čísel ze 49 je
+$${49 \choose 6} = \frac{49!}{43!\ 6!} = \frac{49 \cdot 48 \cdot\ \ldots\ \cdot 44}{6!} = 49 \cdot 4 \cdot 47 \cdot 46 \cdot 3 \cdot 11 \doteq 14 \cdot 10^6,$$
+tedy $1:14$ milionům.
+
+\item Co je derivace $f'(x)$? Je to limita
+\begin{equation}
+\lim_{\Delta x \rightarrow 0}\frac{f(x) - f(x + \Delta x)}{\Delta x},
+\end{equation}
+což je v geometrické interpretaci směrnice tečny v bodě $x$.
+
+\item Pro výpočet bitové šířky $x$ desítkového čísla $C \in \Re$ řešíme nerovnici:
+$$\begin{array}{rcl}
+C      &\leq & 2^x\\
+\log C &\leq & x\cdot \log 2\\
+x      &=    & \left \lceil \frac{\log C}{\log 2} \right \rceil
+\end{array}$$
+
+\item Nespojitá funkce $g(\xi)$ je definována takto:
+$$g(\xi) = \left \{
+  \begin{array}{l}
+  0\quad \mbox{pro}\ \xi\ < 0\\
+  \xi \quad \mbox{pro}\ \xi\ \in \langle 0; 1\rangle\\
+  1\quad \mbox{pro}\ \xi\ > 1
+  \end{array}
+\right.$$
+
+\item Pro numerický integrál $P$ diskrétní funkce $g(x)$ jejíž hodnoty jsou dány tabulkou v bodech $A,A + x,A + 2k,\ldots,A + nk,B,$ kde $k$ je $krok$ tabulky, můžeme použít vztah pro lichoběžníkovou metodu:
+\begin{equation}
+P = k\cdot \left[ \frac{g(A) - g(B)}{2} + \sum_{i=1}^n g(A + ik)\right].
+\end{equation}
+
+\item Určitý integrál funkce je číslo, které představuje plochu ohraničenou funkcí, osou $x$ a daným intervalem, například
+$$\left.\int_0^\pi \frac{\sin x}{3}\mbox{d}x = - \frac{\cos x}{3}\right]_0^\pi = \frac{ - \cos \pi + \cos 0}{3} = \frac{1}{3}$$
+
+\item Při řešení soustavy rovnic zpíšeme koeficienty do matice a provedeme naznačenou úpravu:
+$$\left[ \begin{array}{cccc|c}
+a_{11} & a_{12} & \ldots & a_{1m} & b_{1}\\
+a_{21} & a_{22} & \ldots & a_{2m} & b_{2}\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+a_{n1} & a_{n2} & \ldots & a_{nm} & b_{n}\\
+\end{array} \right]
+\Longrightarrow
+\left[ \begin{array}{cccc|c}
+c_{11} & c_{12} & \ldots & c_{1m} & d_{1}\\
+0      & c_{22} & \ldots & c_{2m} & d_{2}\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0      & 0      & \ldots & c_{nm} & d_{n}\\
+\end{array} \right]$$
+
+\item Koeficient materiálového namáhání vypočteme podle vztahu
+\begin{equation}
+p = \Sigma BS + \frac{2 \pi}{\tau_0}Oc \varrho_2 +Vc \varrho_2,
+\end{equation}
+kde $B$ je měrná tepelná stabilita, $S$ -- plocha stěny, $O$ -- objem vzduchu v místnosti, $\tau_0$ -- doba periodicity pochodu, $V$ -- objemový průtok vyměňovaného vzduchu.
+
+\end{enumerate}
+
+\end{document}
