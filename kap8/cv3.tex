@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\fontfamily{cmss}\selectfont
+\def\arraystretch{1.6}
+
+{
+\catcode`\-=12
+\begin{tabular}{*7{|c}|}
+\hline
+\multicolumn{7}{|c|}{\Large PRODEJNÍ CENA VÝROBKU}\\
+\hline
+\multicolumn{6}{|c|}{ÚPLNÉ VLASTNÍ NÁKLADY VÝROBKU}&\\
+\cline{1-6}
+\multicolumn{3}{|c|}{Přímé náklady}&\multicolumn{3}{|c|}{Režijní náklady}&ZISK\\
+\cline{1-6}
+mzdy&mat.&ostatní&výrobní&správ.&odbyt&\\
+\hline
+\multicolumn{3}{|c|}{}&\multicolumn{4}{|c|}{Hrubé rozpětí}\\
+\hline
+
+\end{tabular}
+}
+
+\end{document}
