@@ -1,0 +1,9 @@
+\makeatletter
+\renewcommand\tableofcontents{%
+    \clearpage\pagestyle{empty}
+    \section*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+}
+\makeatother
