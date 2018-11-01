@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\fontfamily{cmss}\selectfont
+\unitlength=1mm
+\begin{picture}(112,49)
+\put(18,26){
+  \begin{picture}(0,0)
+  \put(0,0){příkazy}
+  
+  \put(11,0){
+    \begin{picture}(0,0)
+    \put(0,1){\line(1,1){10}}
+    \put(0,1){\line(1,-1){10}}
+    \put(12,10){jednoduché}
+    \put(12,-10){strukturované}
+  
+    \put(30,10){
+      \begin{picture}(0,0)
+      \put(0,1){\line(2,1){10}}
+      \put(0,1){\line(2,-1){10}}
+      \put(12,5){přiřazení}
+      \put(12,-5){volání procedury}
+      \end{picture}
+    }
+    
+    \put(34,-10){
+      \begin{picture}(0,0)
+      \put(0,1){\line(2,1){10}}
+      \put(0,1){\line(4,-1){10}}
+      \put(0,1){\line(1,-1){10}}
+      \put(11,5){větvení}
+      \put(11,-2){cykly}
+      \put(11,-10){ostatní}
+      \end{picture}
+    }
+    \end{picture}
+  }
+  \end{picture}
+}
+\end{picture}
+
+\end{document}
