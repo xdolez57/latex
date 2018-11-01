@@ -2,3 +2,4 @@ workspace/*.aux
 workspace/*.log
 workspace/*.tex
 workspace/*.pdf
+workspace/*.toc

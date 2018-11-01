@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+
+\makeatletter
+\renewcommand\tableofcontents{%
+    \clearpage\pagestyle{empty}
+    \section*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+}
+\makeatother
+
+\begin{document}
+
+\section{Section 1}
+\lipsum
+
+\section{Section 2}
+\lipsum
+
+\section{Section 3}
+\lipsum
+
+\section{Section 4}
+\lipsum
+
+\tableofcontents
+
+\end{document}
