@@ -3,3 +3,4 @@ workspace/*.log
 workspace/*.tex
 workspace/*.pdf
 workspace/*.toc
+workspace/*.sty
