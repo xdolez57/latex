@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+\usepackage{colortbl}
+
+\begin{document}
+\def\arraystretch{1.5}
+\tabcolsep=10pt
+\newcolumntype{H}{>{\columncolor[gray]{.5}}c|}
+\newcolumntype{V}{>{\columncolor[gray]{.25}}c|}
+\centering
+\begin{tabular}{|>{\columncolor[gray]{.5}}l|*4{r@{ : }l|}}
+\hline
+\multicolumn{1}{|c|}{Skupina C}
+&\multicolumn{2}{H}{\rotatebox{90}{Švédsko\hspace*{2mm}}}
+&\multicolumn{2}{H}{\rotatebox{90}{Ukrajina\hspace*{2mm}}}
+&\multicolumn{2}{H}{\rotatebox{90}{Švýcarsko\hspace*{2mm}}}
+&\multicolumn{2}{H}{\rotatebox{90}{Rakousko\hspace*{2mm}}}\\
+\hline
+Švédsko   &\multicolumn{2}{V}{} & 6 & 1 & 5 & 3 & 9 & 2\\
+\hline
+Ukrajina  & 1 & 6 &\multicolumn{2}{V}{} & 2 & 2 & 7 & 2\\
+\hline
+Švýcarsko & 3 & 5 & 2 & 2 &\multicolumn{2}{V}{} & 1 & 3\\
+\hline
+Rakousko  & 2 & 9 & 2 & 7 & 3 & 1 & \multicolumn{2}{V}{}\\ 
+\hline
+\end{tabular}
+
+\end{document}
