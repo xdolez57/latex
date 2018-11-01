@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\pagestyle{empty}
+\fontfamily{pag}
+\selectfont
+\unitlength=1mm
+\begin{picture}(90,50)(40,-20)
+\multiput(0,0)(91,0){2}{
+  \multiput(0,0)(0,-51){5}{
+    \put(0,0){\framebox(90,50)}
+    \put(12,45){\makebox(80,0){\textbf{VANĚK -- RAKOVSKÝ -- TRNKA}}}
+    \put(12,41){\makebox(80,0){\fontsize{8pt}{8pt}\selectfont projekty hlubinných vrtů, s.\,r.\,o.}}
+    \put(8,31){\makebox(80,0){\large\textbf{Ing. Jan Novák}}}
+    \put(8,26){\makebox(80,0){\fontsize{8pt}{8pt}\selectfont vedoucí projektant}}
+    \put(5,22){\line(1,0){80}}
+    \fontsize{8}{8}\selectfont
+    \put(29,5){\shortstack[l]{Chodská 35\\
+                              612 00 Brno\\
+                              \textit{tel./fax:} 542\,11\,34\,39\\
+                              \textit{e-mail:} novak@vrty.cz}}
+    \fontsize{14}{14}\selectfont
+    \put(7,42){\circle{10}}
+    \put(7,42){\makebox(0,0){\textbf{V}}}
+    \put(15,42){\circle{10}}
+    \put(15,42){\makebox(0,0){\textbf{R}}}
+    \put(11,35){\circle{10}}
+    \put(11,35){\makebox(0,0){\textbf{T}}}
+  }
+}
+
+\end{picture}
+
+\end{document}
