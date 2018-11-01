@@ -1,0 +1,44 @@
+\documentclass[twoside]{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{graphics}
+
+\begin{document}
+\lipsum[1]
+\marginpar[
+  \raggedleft
+  \unitlength=0.1mm
+  \begin{picture}(0,0)
+  \put(0,0){\oval(40,90)[l]}
+  \put(-15,-32){\resizebox{3mm}{6mm}{!}}
+  \end{picture}
+]
+{
+  \unitlength=0.1mm
+  \begin{picture}(0,0)
+  \put(0,0){\oval(40,90)[r]}
+  \put(-15,-32){\resizebox{3mm}{6mm}{!}}
+  \end{picture}
+}
+\lipsum[1]
+\newpage
+\lipsum[1]
+\marginpar[
+  \raggedleft
+  \unitlength=0.1mm
+  \begin{picture}(0,0)
+  \put(0,0){\oval(40,90)[l]}
+  \put(-15,-32){\resizebox{3mm}{6mm}{!}}
+  \end{picture}
+]
+{
+  \unitlength=0.1mm
+  \begin{picture}(0,0)
+  \put(0,0){\oval(40,90)[r]}
+  \put(-15,-32){\resizebox{3mm}{6mm}{!}}
+  \end{picture}
+}
+\lipsum[1]
+\end{document}
