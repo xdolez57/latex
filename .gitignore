@@ -1,0 +1,4 @@
+workspace/*.aux
+workspace/*.log
+workspace/*.tex
+workspace/*.pdf
