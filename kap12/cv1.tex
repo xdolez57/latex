@@ -1,0 +1,41 @@
+\documentclass[twoside]{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+
+\textwidth=10cm
+\tabcolsep=0pt
+
+\def\ramecek#1#2{%
+\begin{tabular}{|p{25mm}|p{50mm}|p{25mm}|}%
+\hline%
+#1 & \centering\normalsize\bfseries PŘÍRUČKA JAKOSTI & #2\\%
+%\hline%
+\end{tabular}%
+}
+
+\def\strana{%
+\begin{tabular}{@{\hspace{3mm}}l}%
+strana \bfseries\thepage\\%
+\end{tabular}%
+}
+
+\def\info{%
+\begin{tabular}{@{\hspace{2mm}}p{25mm}@{}}
+\vspace*{\fill}\fontsize{8}{10}\selectfont Kapitola: \textbf{\thesection}\newline%
+Vypracoval:\newline%
+Schválil:%
+\end{tabular}%
+}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead[CE]{\fontsize{8}{9}\selectfont\ramecek{\strana}{\info}}
+\fancyhead[CO]{\fontsize{8}{9}\selectfont\ramecek{\info}{\strana}}
+
+\lipsum
+
+\end{document}
