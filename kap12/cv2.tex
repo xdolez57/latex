@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+
+\newcounter{prikladcnt}
+\newcounter{body}
+\def\priklad#1#2{\addtocounter{prikladcnt}{1}\addtocounter{body}{#1}
+\noindent\textbf{Příklad \theprikladcnt :}\, #2
+\begin{flushright}(\bfseries počet bodů: #1)\end{flushright}}
+\def\celbody{\thebody}
+
+\begin{document}
+
+\priklad{2}{\lipsum[1]}
+\priklad{3}{\lipsum[2]}
+\priklad{5}{\lipsum[3]}
+
+\noindent \raggedleft\bfseries Celkem bodů: \celbody
+
+\end{document}
