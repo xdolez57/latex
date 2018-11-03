@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{fancyhdr}
+
+\newcounter{polozkacnt}
+
+\def\zahlavi{
+\begin{tabular}{|r|l|l|r<{\,Kč}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{No.}} & \textbf{Inv. číslo} & \textbf{Název položky} & \multicolumn{1}{c|}{\textbf{Cena}}\\
+\hline}
+
+\def\polozka#1#2#3{
+\stepcounter{polozkacnt}
+\thepolozkacnt & #1 & #2 & #3\\}
+
+\def\konecstrany{
+\hline
+\end{tabular}
+}
+
+\def\headrulewidth{0pt}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[R]{List \thepage}
+
+\zahlavi
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\hline
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\hline
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\hline
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\konecstrany
+\clearpage
+
+\zahlavi
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\hline
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\hline
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\hline
+\polozka{1234}{Položka 1}{100}
+\polozka{1234}{Položka 2}{150}
+\polozka{1234}{Položka 3}{1000}
+\polozka{1234}{Položka 4}{50}
+\polozka{1234}{Položka 5}{8888}
+\konecstrany
+
+\end{document}
