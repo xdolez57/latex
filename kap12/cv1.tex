@@ -3,30 +3,40 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-\usepackage{lipsum}
 
 \textwidth=10cm
 \tabcolsep=0pt
+\addtolength{\headsep}{1cm}
+\addtolength{\textwidth}{-1cm}
 
-\def\ramecek#1#2{%
-\begin{tabular}{|p{25mm}|p{50mm}|p{25mm}|}%
-\hline%
-#1 & \centering\normalsize\bfseries PŘÍRUČKA JAKOSTI & #2\\%
-%\hline%
-\end{tabular}%
+\def\headrulewidth{0pt}
+
+\def\ramecek#1#2{
+\unitlength=1mm
+\begin{picture}(0,0)
+\put(-50,0){\line(0,-1){220}}
+\put(50,0){\line(0,-1){220}}
+\put(-50,-220){\line(1,0){100}}
+\put(0,0){\makebox(0,0){%
+\begin{tabular}{|p{25mm}|p{50mm}|p{25mm}|}
+\hline
+#1 & \centering\normalsize\bfseries PŘÍRUČKA JAKOSTI & #2\\
+\hline
+\end{tabular}}}
+\end{picture}
 }
 
-\def\strana{%
-\begin{tabular}{@{\hspace{3mm}}l}%
-strana \bfseries\thepage\\%
-\end{tabular}%
+\def\strana{
+\begin{tabular}{@{\hspace{3mm}}l}
+strana \bfseries\thepage
+\end{tabular}
 }
 
-\def\info{%
+\def\info{
 \begin{tabular}{@{\hspace{2mm}}p{25mm}@{}}
-\vspace*{\fill}\fontsize{8}{10}\selectfont Kapitola: \textbf{\thesection}\newline%
-Vypracoval:\newline%
-Schválil:%
+\vspace*{\fill}\fontsize{8}{10}\selectfont Kapitola: \textbf{\thesection}\newline
+Vypracoval:\newline
+Schválil:
 \end{tabular}%
 }
 
@@ -35,7 +45,11 @@ Schválil:%
 \pagestyle{fancy}
 \fancyhead[CE]{\fontsize{8}{9}\selectfont\ramecek{\strana}{\info}}
 \fancyhead[CO]{\fontsize{8}{9}\selectfont\ramecek{\info}{\strana}}
+\fancyfoot{}
+\parindent=0pt
+\parskip=10pt
+\footnotesize
 
-\lipsum
+Při odběru vzorků se postupuje podle vnitřní směrnice č.\,213/03. Odpovědný pracovník zaznamená příjem každého vzorku do příjmové knihy, která je evidována na příjímacím pracovišti\dots
 
 \end{document}
