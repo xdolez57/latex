@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{sbornik}
+\usepackage{lipsum}
+
+\begin{document}
+
+\titulnistrana{2018}
+
+\clanek{První článek}{Autor První}{Ulice první 1, Brno, 601 00}{\lipsum[1]}{Klíčové slovo 1, klíčové slovo 2, klíčové slovo 3 a klíčové slovo 4.}
+
+\textclanku
+\cast{Část 1}
+\lipsum
+\podcast{Podčást 1}
+\lipsum
+\konectextu
+
+\seznamlit
+\kniha{Autor Knihy1}{Kniha 1}{ISBN 12345}
+\clcasop{Autor Časopisu1}{Nazev článku1}{Časopis 1}{ISBN 54321}
+\casopis{Časopis 2}{Název článku}
+\koneclit
+
+\clanek{Druhý článek}{Autor Druhý}{Ulice druhá 2, Brno, 602 00}{\lipsum[2]}{Klíčove slovo 5, klíčové slovo 6, klíčové slovo 7 a klíčové slovo 8.}
+
+\textclanku
+\cast{Část 1}
+\podcast{Podčást 1}
+\lipsum
+\konectextu
+
+\seznamlit
+\kniha{Autor Knihy2}{Kniha 2}{ISBN 67890}
+\clcasop{Autor Časopisu3}{Nazev článku2}{Časopis 3}{ISBN 098765}
+\casopis{Časopis 4}{Název článku}
+\koneclit
+
+\konecsborniku
+\end{document}
