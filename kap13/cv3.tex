@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+
+\newlength{\hspacewidth}
+\hspacewidth=4mm
+\newlength{\imagewidth}
+\imagewidth=0.5\linewidth
+\addtolength{\imagewidth}{-0.5\hspacewidth}
+
+\def\obr#1#2{%
+\stepcounter{figure}%
+\parbox[t]{\imagewidth}{%
+\includegraphics{#1}\\
+Obr. \thefigure: #2}%
+}
+
+\def\dvaobr#1#2#3#4{
+\begin{figure}[h]
+\noindent\obr{#1}{#2}\hspace*{\fill}\obr{#3}{#4}
+\end{figure}}
+
+\begin{document}
+
+\dvaobr{img/image01.eps}{%
+Když ponoříte do vody konec hole, zdá se vám, že je zlomená; je to zrakový klam, který dodatečně korigujeme zkušeností jinou. Víme, že se zkušenost mýlívá, mýlí se smyslové i rozum; proto myslící, kritický člověk upadá ve zvláštní neklid: ví, že se může mýlit.
+}%
+{img/image01.eps}{%
+Když ponoříte do vody konec hole, zdá se vám, že je zlomená; je to zrakový klam, který dodatečně korigujeme zkušeností jinou. Víme, že se zkušenost mýlívá, mýlí se smyslové i rozum; proto myslící, kritický člověk upadá ve zvláštní neklid: ví, že se může mýlit.
+}
+
+\end{document}
