@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\def\raiseup#1{\raisebox{0.42\baselineskip}{ #1 }}
+
+\begin{document}
+
+c\makebox[0pt][l]{\raiseup{---\raiseup{d\raiseup{---\raiseup{e\raiseup{f\raiseup{---\raiseup{g\raiseup{---\raiseup{a\raiseup{---\raiseup{h\raiseup{c}}}}}}}}}}}}}%
+\hspace{24mm}c\raiseup{cis\raiseup{d\raiseup{dis\raiseup{e\raiseup{f\raiseup{fis\raiseup{g\raiseup{gis\raiseup{a\raiseup{ais\raiseup{h\raiseup{c}}}}}}}}}}}}
+
+\end{document}
