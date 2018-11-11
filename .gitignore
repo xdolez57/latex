@@ -4,3 +4,5 @@ workspace/*.tex
 workspace/*.pdf
 workspace/*.toc
 workspace/*.sty
+workspace/*.idx
+workspace/*.ilg

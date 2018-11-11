@@ -6,8 +6,11 @@ main.pdf: main.tex
 
 all: clean main.pdf
 
+index: main_v.idx
+	makeindex main_v.idx -o index.tex
+
 show:
 	xdg-open main.pdf
 
 clean:
-	rm -fv *.log *.aux *.pdf *.dvi *.toc
+	rm -fv *.log *.aux *.pdf *.dvi *.toc *.idx *.ilg
