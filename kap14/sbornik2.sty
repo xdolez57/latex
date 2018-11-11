@@ -1,0 +1,81 @@
+\usepackage{multicol}
+
+%%% Nastavení běžných odstavců
+\parindent=1em       % zarážka čtverčík
+\parskip=0pt         % nulové odsazení
+
+%%% Redefinice standardních příkazů
+\renewcommand\subsection
+    {\@startsection{subsection}{2}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\large\sffamily\bfseries}}
+
+\renewcommand\subsubsection
+    {\@startsection{subsubsection}{3}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\normalsize\sffamily\bfseries}}
+
+%%% Strukturní příkazy
+\def\nadpis#1{\begin{center}
+    \Large\sffamily\bfseries #1 \end{center}}
+
+\def\autor#1{\begin{center}
+    \large\sffamily #1\footnotemark
+    \end{center}}
+
+\def\adresa#1{\footnotetext{#1}}
+
+\def\abstrakt#1{\begin{quotation}
+    \noindent\textbf{Abstrakt}\\#1
+    \end{quotation}}
+
+\def\klicslova#1{\begin{quotation}
+    \noindent\textbf{Klíčová slova:} #1
+    \end{quotation}}
+
+\def\cast#1{\subsection*{#1}}
+\def\podcast#1{\subsubsection*{#1}}
+
+\def\clanek#1#2#3#4#5{%
+    \clearpage%
+    \nadpis{#1}%
+    \autor{#2}%
+    \adresa{#3}%
+    \abstrakt{#4}%
+    \klicslova{#5}%
+    \addtocontents{toc}{{\bigskip\noindent\emph{#2:}\protect\par}}%
+    \addcontentsline{toc}{section}{\hspace{1em}#1}%
+}
+
+\def\textclanku{\begin{multicols}{2}}
+\def\konectextu{\end{multicols}}
+
+\def\titulnistrana#1{%
+  \pagestyle{empty}%
+  {\vspace*{\fill}%
+  \centering\sffamily\bfseries\Huge SBORNÍK #1%
+  \vspace*{\fill}%
+  \clearpage}%
+  \pagestyle{plain}%
+}
+
+%%% Seznam literatury
+\def\seznamlit{\leftskip=1em
+    \parindent=-1em}
+
+\def\koneclit{\par\leftskip=0pt
+    \parindent=1em}
+
+\def\kniha#1#2#3{\par\textsc{#1} \textit{#2} #3.}
+\def\clcasop#1#2#3#4{\par\textsc{#1} #2
+    \textit{#3} #4.}
+\def\casopis#1#2{\par\textit{#1} #2.}
+
+%%% Vyznačování v textu
+\def\vyznac#1{{\itshape #1}}
+\def\pojem#1{{\bfseries #1}}
+
+%%% Indikace konce sborníku
+\def\konecsborniku{\clearpage\tableofcontents\relax}
